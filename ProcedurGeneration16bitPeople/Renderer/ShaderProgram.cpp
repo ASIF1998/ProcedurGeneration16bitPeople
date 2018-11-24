@@ -13,6 +13,7 @@
 #include <string>
 
 #include <fstream>
+#include <iostream>
 
 using std::invalid_argument;
 using std::runtime_error;
@@ -55,6 +56,7 @@ void compileShader(GLuint& handle, GLenum Shad, const string_view& path)
     glGetShaderiv(handle, GL_COMPILE_STATUS, &check);
     
     if (!check) {
+        std::cout << path << std::endl;
         throw runtime_error("Error compile shader");
     }
 }

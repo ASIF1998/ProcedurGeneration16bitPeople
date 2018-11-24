@@ -35,6 +35,7 @@ void VertexBuffer::data(const void *data, size_t lengh, GLenum usage)
     
     glBindBuffer(GL_ARRAY_BUFFER, _handle);
     glBufferData(GL_ARRAY_BUFFER, lengh, data, usage);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
 void VertexBuffer::addData(const void *data, size_t offset, size_t lengh)
@@ -50,4 +51,14 @@ void VertexBuffer::addData(const void *data, size_t offset, size_t lengh)
 VertexBuffer::operator uint32_t() const noexcept
 {
     return _handle;
+}
+
+void VertexBuffer::bind() const noexcept
+{
+    glBindBuffer(GL_ARRAY_BUFFER, _handle);
+}
+
+void VertexBuffer::unbind() const noexcept
+{
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
 }

@@ -44,6 +44,9 @@ public:
     
     operator uint32_t() const noexcept;
     
+    void bind() const noexcept;
+    void unbind() const noexcept;
+    
 private:
     uint32_t _handle;
 };

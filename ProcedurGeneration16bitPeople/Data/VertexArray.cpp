@@ -30,8 +30,15 @@ VertexArray::~VertexArray()
 void VertexArray::addAtribute(const VertexBuffer& vbo, uint32_t vboIndx, int32_t size, GLenum type)
 {
     glBindVertexArray(_handle);
+    
+    vbo.bind();
+    
     glEnableVertexAttribArray(vboIndx);
     glVertexAttribPointer(vboIndx, size, type, GL_FALSE, 0, nullptr);
+    
+    vbo.unbind();
+    
+    glBindVertexArray(0);
 }
 
 VertexArray::operator uint32_t() const noexcept
