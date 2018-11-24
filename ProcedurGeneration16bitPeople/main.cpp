@@ -60,30 +60,6 @@ int main()
     unique_ptr<ShadereProgram> prog(new ShadereProgram("/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Renderer/Shaders/basic.vs.glsl",
                                                        "/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Renderer/Shaders/basic.fs.glsl"));
     
-//    GLuint texture;
-
-//    glGenTextures(1, &texture);
-//    glBindTexture(GL_TEXTURE_2D, texture);
-//
-//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-//
-//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-//
-//    int32_t width, height;
-//    GLubyte* image = SOIL_load_image("/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Images/Testing/allSprites.png", &width, &height, 0, SOIL_LOAD_RGBA);
-//
-//    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0,  GL_RGBA, GL_UNSIGNED_BYTE, image);
-//
-//    glGenerateMipmap(GL_TEXTURE_2D);
-//    glBindTexture(GL_TEXTURE_2D, 0);
-//
-//    glActiveTexture(GL_TEXTURE0);
-//    glBindTexture(GL_TEXTURE_2D, texture);
-//
-//    glUniform1i(glGetUniformLocation(*prog, "ourTexture"), 0);
-    
     prog->use();
     
     unique_ptr<Texture> texture = loadImage("/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Images/Testing/allSprites.png");
