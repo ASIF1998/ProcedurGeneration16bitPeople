@@ -40,22 +40,12 @@
 /* Begin PBXFileReference section */
 		9504507F21A9637900E3484F /* LoadImage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoadImage.cpp; sourceTree = "<group>"; };
 		9504508021A9637900E3484F /* LoadImage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LoadImage.hpp; sourceTree = "<group>"; };
-		9504508421A9703100E3484F /* helmet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_01.png; sourceTree = "<group>"; };
-		9504508521A9703100E3484F /* helmet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_02.png; sourceTree = "<group>"; };
-		9504508721A9703100E3484F /* head_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_01.png; sourceTree = "<group>"; };
-		9504508821A9703100E3484F /* head_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_02.png; sourceTree = "<group>"; };
-		9504508A21A9703100E3484F /* bow_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow_01.png; sourceTree = "<group>"; };
-		9504508C21A9703100E3484F /* hair_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_01.png; sourceTree = "<group>"; };
-		9504508D21A9703100E3484F /* hair_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_02.png; sourceTree = "<group>"; };
-		9504508F21A9703100E3484F /* torso_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torso_01.png; sourceTree = "<group>"; };
-		9504509021A9703100E3484F /* torso_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torso_02.png; sourceTree = "<group>"; };
-		9504509221A9703100E3484F /* weapon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_01.png; sourceTree = "<group>"; };
-		9504509321A9703100E3484F /* weapon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_02.png; sourceTree = "<group>"; };
-		9504509521A9703100E3484F /* feet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_02.png; sourceTree = "<group>"; };
-		9504509621A9703100E3484F /* feet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_01.png; sourceTree = "<group>"; };
-		9504509721A9703100E3484F /* colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colors.png; sourceTree = "<group>"; };
-		9504509921A9703100E3484F /* shield_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_01.png; sourceTree = "<group>"; };
-		9504509A21A9703100E3484F /* shield_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_02.png; sourceTree = "<group>"; };
+		95265ABE21B001C0009E4D15 /* feet_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_1.png; sourceTree = "<group>"; };
+		95265ABF21B001C0009E4D15 /* feet_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_2.png; sourceTree = "<group>"; };
+		95265AC021B001C0009E4D15 /* head_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_1.png; sourceTree = "<group>"; };
+		95265AC121B001C0009E4D15 /* bow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow_1.png; sourceTree = "<group>"; };
+		95265AC221B019FE009E4D15 /* hair_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_1.png; sourceTree = "<group>"; };
+		95265AC321B01A4B009E4D15 /* hair_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_2.png; sourceTree = "<group>"; };
 		953A7AC621A8441600BC3565 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
 		953A7AC721A8441600BC3565 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
 		953A7ACA21A8444D00BC3565 /* ShaderProgram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderProgram.cpp; sourceTree = "<group>"; };
@@ -101,6 +91,38 @@
 		95C8B94221A82E46000258CD /* VertexxBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexxBuffer.hpp; sourceTree = "<group>"; };
 		95C8B94421A83DA4000258CD /* VertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
 		95C8B94521A83DA4000258CD /* VertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexArray.hpp; sourceTree = "<group>"; };
+		95D7EBB021AAEC6C00200798 /* helmet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_01.png; sourceTree = "<group>"; };
+		95D7EBB121AAEC6C00200798 /* helmet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_02.png; sourceTree = "<group>"; };
+		95D7EBB321AAEC6C00200798 /* shield_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_01.png; sourceTree = "<group>"; };
+		95D7EBB421AAEC6C00200798 /* shield_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_02.png; sourceTree = "<group>"; };
+		95D7EBB521AAEC6C00200798 /* colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colors.png; sourceTree = "<group>"; };
+		95D7EBB721AAEC6C00200798 /* weapon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_01.png; sourceTree = "<group>"; };
+		95D7EBB821AAEC6C00200798 /* weapon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_02.png; sourceTree = "<group>"; };
+		95D7EBBA21AAEC6C00200798 /* feet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_02.png; sourceTree = "<group>"; };
+		95D7EBBB21AAEC6C00200798 /* feet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_01.png; sourceTree = "<group>"; };
+		95D7EBBD21AAEC6C00200798 /* bow_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow_01.png; sourceTree = "<group>"; };
+		95D7EBBF21AAEC6C00200798 /* head_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_01.png; sourceTree = "<group>"; };
+		95D7EBC021AAEC6C00200798 /* head_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_02.png; sourceTree = "<group>"; };
+		95D7EBC221AAEC6C00200798 /* torso_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torso_01.png; sourceTree = "<group>"; };
+		95D7EBC321AAEC6C00200798 /* torso_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torso_02.png; sourceTree = "<group>"; };
+		95D7EBC521AAEC6C00200798 /* hair_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_01.png; sourceTree = "<group>"; };
+		95D7EBC621AAEC6C00200798 /* hair_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_02.png; sourceTree = "<group>"; };
+		95D7EBC921AAF5F100200798 /* helmet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_01.png; sourceTree = "<group>"; };
+		95D7EBCA21AAF5F100200798 /* helmet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_02.png; sourceTree = "<group>"; };
+		95D7EBCC21AAF5F100200798 /* shield_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_01.png; sourceTree = "<group>"; };
+		95D7EBCD21AAF5F100200798 /* shield_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_02.png; sourceTree = "<group>"; };
+		95D7EBCE21AAF5F100200798 /* colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colors.png; sourceTree = "<group>"; };
+		95D7EBD021AAF5F100200798 /* weapon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_01.png; sourceTree = "<group>"; };
+		95D7EBD121AAF5F100200798 /* weapon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_02.png; sourceTree = "<group>"; };
+		95D7EBD321AAF5F100200798 /* feet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_02.png; sourceTree = "<group>"; };
+		95D7EBD421AAF5F100200798 /* feet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_01.png; sourceTree = "<group>"; };
+		95D7EBD621AAF5F100200798 /* bow_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow_01.png; sourceTree = "<group>"; };
+		95D7EBD821AAF5F100200798 /* head_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_01.png; sourceTree = "<group>"; };
+		95D7EBD921AAF5F100200798 /* head_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_02.png; sourceTree = "<group>"; };
+		95D7EBDB21AAF5F100200798 /* torso_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torso_01.png; sourceTree = "<group>"; };
+		95D7EBDC21AAF5F100200798 /* torso_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torso_02.png; sourceTree = "<group>"; };
+		95D7EBDE21AAF5F100200798 /* hair_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_01.png; sourceTree = "<group>"; };
+		95D7EBDF21AAF5F100200798 /* hair_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_02.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,93 +139,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9504508221A96FF400E3484F /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				9504508921A9703100E3484F /* Bow */,
-				9504509721A9703100E3484F /* colors.png */,
-				9504509421A9703100E3484F /* Feet */,
-				9504508B21A9703100E3484F /* Hair */,
-				9504508621A9703100E3484F /* Head */,
-				9504508321A9703100E3484F /* Helmet */,
-				9504509821A9703100E3484F /* Shield */,
-				9504508E21A9703100E3484F /* Torso */,
-				9504509121A9703100E3484F /* Weapon */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		9504508321A9703100E3484F /* Helmet */ = {
-			isa = PBXGroup;
-			children = (
-				9504508421A9703100E3484F /* helmet_01.png */,
-				9504508521A9703100E3484F /* helmet_02.png */,
-			);
-			path = Helmet;
-			sourceTree = "<group>";
-		};
-		9504508621A9703100E3484F /* Head */ = {
-			isa = PBXGroup;
-			children = (
-				9504508721A9703100E3484F /* head_01.png */,
-				9504508821A9703100E3484F /* head_02.png */,
-			);
-			path = Head;
-			sourceTree = "<group>";
-		};
-		9504508921A9703100E3484F /* Bow */ = {
-			isa = PBXGroup;
-			children = (
-				9504508A21A9703100E3484F /* bow_01.png */,
-			);
-			path = Bow;
-			sourceTree = "<group>";
-		};
-		9504508B21A9703100E3484F /* Hair */ = {
-			isa = PBXGroup;
-			children = (
-				9504508C21A9703100E3484F /* hair_01.png */,
-				9504508D21A9703100E3484F /* hair_02.png */,
-			);
-			path = Hair;
-			sourceTree = "<group>";
-		};
-		9504508E21A9703100E3484F /* Torso */ = {
-			isa = PBXGroup;
-			children = (
-				9504508F21A9703100E3484F /* torso_01.png */,
-				9504509021A9703100E3484F /* torso_02.png */,
-			);
-			path = Torso;
-			sourceTree = "<group>";
-		};
-		9504509121A9703100E3484F /* Weapon */ = {
-			isa = PBXGroup;
-			children = (
-				9504509221A9703100E3484F /* weapon_01.png */,
-				9504509321A9703100E3484F /* weapon_02.png */,
-			);
-			path = Weapon;
-			sourceTree = "<group>";
-		};
-		9504509421A9703100E3484F /* Feet */ = {
-			isa = PBXGroup;
-			children = (
-				9504509521A9703100E3484F /* feet_02.png */,
-				9504509621A9703100E3484F /* feet_01.png */,
-			);
-			path = Feet;
-			sourceTree = "<group>";
-		};
-		9504509821A9703100E3484F /* Shield */ = {
-			isa = PBXGroup;
-			children = (
-				9504509921A9703100E3484F /* shield_01.png */,
-				9504509A21A9703100E3484F /* shield_02.png */,
-			);
-			path = Shield;
-			sourceTree = "<group>";
-		};
 		953A7AC921A8442400BC3565 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +163,6 @@
 		957D8F6021A940640058630F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9504508221A96FF400E3484F /* Source */,
 				957D8F6121A9406D0058630F /* Testing */,
 			);
 			path = Images;
@@ -237,6 +171,14 @@
 		957D8F6121A9406D0058630F /* Testing */ = {
 			isa = PBXGroup;
 			children = (
+				95265AC121B001C0009E4D15 /* bow_1.png */,
+				95265ABE21B001C0009E4D15 /* feet_1.png */,
+				95265ABF21B001C0009E4D15 /* feet_2.png */,
+				95265AC021B001C0009E4D15 /* head_1.png */,
+				95265AC221B019FE009E4D15 /* hair_1.png */,
+				95265AC321B01A4B009E4D15 /* hair_2.png */,
+				95D7EBAE21AAEC6C00200798 /* Source */,
+				95D7EBC721AAF5F100200798 /* Source */,
 				957D8F6221A9407A0058630F /* allSprites.png */,
 			);
 			path = Testing;
@@ -344,6 +286,182 @@
 				953A7AC721A8441600BC3565 /* Texture.h */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		95D7EBAE21AAEC6C00200798 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBAF21AAEC6C00200798 /* Helmet */,
+				95D7EBB221AAEC6C00200798 /* Shield */,
+				95D7EBB521AAEC6C00200798 /* colors.png */,
+				95D7EBB621AAEC6C00200798 /* Weapon */,
+				95D7EBB921AAEC6C00200798 /* Feet */,
+				95D7EBBC21AAEC6C00200798 /* Bow */,
+				95D7EBBE21AAEC6C00200798 /* Head */,
+				95D7EBC121AAEC6C00200798 /* Torso */,
+				95D7EBC421AAEC6C00200798 /* Hair */,
+			);
+			name = Source;
+			path = ProcedurGeneration16bitPeople/Images/Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		95D7EBAF21AAEC6C00200798 /* Helmet */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBB021AAEC6C00200798 /* helmet_01.png */,
+				95D7EBB121AAEC6C00200798 /* helmet_02.png */,
+			);
+			path = Helmet;
+			sourceTree = "<group>";
+		};
+		95D7EBB221AAEC6C00200798 /* Shield */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBB321AAEC6C00200798 /* shield_01.png */,
+				95D7EBB421AAEC6C00200798 /* shield_02.png */,
+			);
+			path = Shield;
+			sourceTree = "<group>";
+		};
+		95D7EBB621AAEC6C00200798 /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBB721AAEC6C00200798 /* weapon_01.png */,
+				95D7EBB821AAEC6C00200798 /* weapon_02.png */,
+			);
+			path = Weapon;
+			sourceTree = "<group>";
+		};
+		95D7EBB921AAEC6C00200798 /* Feet */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBBA21AAEC6C00200798 /* feet_02.png */,
+				95D7EBBB21AAEC6C00200798 /* feet_01.png */,
+			);
+			path = Feet;
+			sourceTree = "<group>";
+		};
+		95D7EBBC21AAEC6C00200798 /* Bow */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBBD21AAEC6C00200798 /* bow_01.png */,
+			);
+			path = Bow;
+			sourceTree = "<group>";
+		};
+		95D7EBBE21AAEC6C00200798 /* Head */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBBF21AAEC6C00200798 /* head_01.png */,
+				95D7EBC021AAEC6C00200798 /* head_02.png */,
+			);
+			path = Head;
+			sourceTree = "<group>";
+		};
+		95D7EBC121AAEC6C00200798 /* Torso */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBC221AAEC6C00200798 /* torso_01.png */,
+				95D7EBC321AAEC6C00200798 /* torso_02.png */,
+			);
+			path = Torso;
+			sourceTree = "<group>";
+		};
+		95D7EBC421AAEC6C00200798 /* Hair */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBC521AAEC6C00200798 /* hair_01.png */,
+				95D7EBC621AAEC6C00200798 /* hair_02.png */,
+			);
+			path = Hair;
+			sourceTree = "<group>";
+		};
+		95D7EBC721AAF5F100200798 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBC821AAF5F100200798 /* Helmet */,
+				95D7EBCB21AAF5F100200798 /* Shield */,
+				95D7EBCE21AAF5F100200798 /* colors.png */,
+				95D7EBCF21AAF5F100200798 /* Weapon */,
+				95D7EBD221AAF5F100200798 /* Feet */,
+				95D7EBD521AAF5F100200798 /* Bow */,
+				95D7EBD721AAF5F100200798 /* Head */,
+				95D7EBDA21AAF5F100200798 /* Torso */,
+				95D7EBDD21AAF5F100200798 /* Hair */,
+			);
+			name = Source;
+			path = ProcedurGeneration16bitPeople/Images/Source;
+			sourceTree = SOURCE_ROOT;
+		};
+		95D7EBC821AAF5F100200798 /* Helmet */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBC921AAF5F100200798 /* helmet_01.png */,
+				95D7EBCA21AAF5F100200798 /* helmet_02.png */,
+			);
+			path = Helmet;
+			sourceTree = "<group>";
+		};
+		95D7EBCB21AAF5F100200798 /* Shield */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBCC21AAF5F100200798 /* shield_01.png */,
+				95D7EBCD21AAF5F100200798 /* shield_02.png */,
+			);
+			path = Shield;
+			sourceTree = "<group>";
+		};
+		95D7EBCF21AAF5F100200798 /* Weapon */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBD021AAF5F100200798 /* weapon_01.png */,
+				95D7EBD121AAF5F100200798 /* weapon_02.png */,
+			);
+			path = Weapon;
+			sourceTree = "<group>";
+		};
+		95D7EBD221AAF5F100200798 /* Feet */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBD321AAF5F100200798 /* feet_02.png */,
+				95D7EBD421AAF5F100200798 /* feet_01.png */,
+			);
+			path = Feet;
+			sourceTree = "<group>";
+		};
+		95D7EBD521AAF5F100200798 /* Bow */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBD621AAF5F100200798 /* bow_01.png */,
+			);
+			path = Bow;
+			sourceTree = "<group>";
+		};
+		95D7EBD721AAF5F100200798 /* Head */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBD821AAF5F100200798 /* head_01.png */,
+				95D7EBD921AAF5F100200798 /* head_02.png */,
+			);
+			path = Head;
+			sourceTree = "<group>";
+		};
+		95D7EBDA21AAF5F100200798 /* Torso */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBDB21AAF5F100200798 /* torso_01.png */,
+				95D7EBDC21AAF5F100200798 /* torso_02.png */,
+			);
+			path = Torso;
+			sourceTree = "<group>";
+		};
+		95D7EBDD21AAF5F100200798 /* Hair */ = {
+			isa = PBXGroup;
+			children = (
+				95D7EBDE21AAF5F100200798 /* hair_01.png */,
+				95D7EBDF21AAF5F100200798 /* hair_02.png */,
+			);
+			path = Hair;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

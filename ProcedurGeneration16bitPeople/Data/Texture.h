@@ -13,7 +13,12 @@
 
 #include "../Conteiner/ArrayView.h"
 
+#include <glm/glm.hpp>
+
 using namespace std;
+
+using glm::vec4;
+
 class TextureRender;
 
 class Texture
@@ -56,7 +61,12 @@ public:
     };
     
     
-    Texture();
+    /**
+     * Конструктор.
+     *
+     * @param backgroundColor цвето заднего фона.
+     */
+    Texture(const vec4& backgroundColor = {0.0f, 0.0f, 0.0f, 0.0f});
     
     /**
      * Конструктор.
@@ -66,7 +76,7 @@ public:
      * @param height высота текстуры
      * @param data указатель на массив данных
      */
-    Texture(const string_view& name, uint32_t width, uint32_t height,  const float* data = nullptr);
+    Texture(const string_view& name, uint32_t width, uint32_t height,  const float* data = nullptr, const vec4& backgroundColor = {0.0f, 0.0f, 0.0f, 0.0f});
     
     /**
      * Конструктор.
@@ -75,7 +85,26 @@ public:
      * @param height высота текстуры
      * @param data указатель на массив данных
      */
-    Texture(uint32_t width, uint32_t height, const float* data = nullptr);
+    Texture(uint32_t width, uint32_t height, const float* data = nullptr, const vec4& backgroundColor = {0.0f, 0.0f, 0.0f, 0.0f});
+    
+    /**
+     * Конструктор.
+     *
+     * @param name имя текстуры
+     * @param width ширина текстуры
+     * @param height высота текстуры
+     * @param backgroundColor цвет заднего фона
+     */
+    Texture(const string_view& name, uint32_t width, uint32_t height, const vec4& backgroundColor = {0.0f, 0.0f, 0.0f, 0.0f});
+    
+    /**
+     * Конструктор.
+     *
+     * @param width ширина текстуры
+     * @param height высота текстуры
+     * @param backgroundColor цвет заднего фона
+     */
+    Texture(uint32_t width, uint32_t height, const vec4& backgroundColor = {0.0f, 0.0f, 0.0f, 0.0f});
     
     Texture(Texture&& texture);
     
@@ -95,8 +124,11 @@ public:
     
     uint32_t width() const noexcept;
     uint32_t height() const noexcept;
-    string_view name() const noexcept;
     
+    void backgroundColor(const vec4& color);
+    vec4 backgroundColor() const noexcept;
+    
+    string_view name() const noexcept;
     void name(string_view name);
     
     /**
@@ -122,13 +154,31 @@ public:
     const Texel at(uint32_t x, uint32_t y) const;
     
     /**
-     * Метод, предназначенный для смешивания 2-ч текстур.
+     * Метод, предназначенный для смешивания 2-х текстур.
      *
      * @param tex текстура для смешивания
      * @param a1 степень присутствия текстуры this
      * @param a2 степень присутствия текстуры tex
      */
     void blend(const Texture& tex, float a1, float a2) noexcept;
+    
+    /**
+     * Метод, предназначенный для смешивания 2-х текстур(предоставляет линейную смесь).
+     * Текстура смешивается путём линейной интерполяии между двумя каналами
+     * текстур *this и tex.
+     *
+     * @param tex текстура для смешивания
+     * @param a значение для интерполяции
+     */
+    void blend(const Texture& tex, float a);
+    
+    /**
+     * Данный метод предназначен для объединения 2-х текстур.
+     * При объединении будет учитываться цвет фона у текстуры *this(в отличии от оператороы | и |=).
+     *
+     * @param tex текстура с которрой нужно объединятся
+     */
+    void combination(const Texture& tex);
     
     const Texture& operator = (const Texture& tex);
     
@@ -162,6 +212,7 @@ protected:
     uint32_t _width;
     uint32_t _height;
     float* _data;
+    vec4 _backgroundColor;
 };
 
 #endif
