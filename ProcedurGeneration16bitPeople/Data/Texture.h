@@ -45,10 +45,10 @@ public:
         {
         }
         
-        void red(uint8_t r) noexcept;
-        void green(uint8_t g) noexcept;
-        void blue(uint8_t b) noexcept;
-        void alpha(uint8_t a) noexcept;
+        void red(float r) noexcept;
+        void green(float g) noexcept;
+        void blue(float b) noexcept;
+        void alpha(float a) noexcept;
         
         float red() const noexcept;
         float green() const noexcept;

@@ -160,12 +160,10 @@ const ArrayView<float> Texture::line(uint32_t x) const
 Texture::Texel Texture::at(uint32_t x, uint32_t y)
 {
     if (x >= _width || y >= _height) {
-        std::cout << "\nX: " << (int)x << " Y: " <<  (int)y << std::endl;
-        std::cout << "Width: " << _width << " Height: " << _height << std::endl;
         throw invalid_argument("Crossing the array");
     }
     
-    return Texel(&_data[(x * _width + y) * 4]);
+    return Texel(&_data[(x * 4 * _height) + (y * 4)]);
 }
 
 const Texture::Texel Texture::at(uint32_t x, uint32_t y) const
@@ -174,25 +172,25 @@ const Texture::Texel Texture::at(uint32_t x, uint32_t y) const
         throw invalid_argument("Crossing the array");
     }
     
-    return Texel(&_data[(x * _width + y) * 4]);
+    return Texel(&_data[(x * 4 * _height) + (y * 4)]);
 }
 
-void Texture::Texel::red(uint8_t r) noexcept
+void Texture::Texel::red(float r) noexcept
 {
     _texel[0] = r;
 }
 
-void Texture::Texel::green(uint8_t g) noexcept
+void Texture::Texel::green(float g) noexcept
 {
     _texel[1] = g;
 }
 
-void Texture::Texel::blue(uint8_t b) noexcept
+void Texture::Texel::blue(float b) noexcept
 {
     _texel[2] = b;
 }
 
-void Texture::Texel::alpha(uint8_t a) noexcept
+void Texture::Texel::alpha(float a) noexcept
 {
     _texel[3] = a;
 }
@@ -239,6 +237,8 @@ void Texture::blend(const Texture &tex, float a)
 void Texture::combination(const Texture &tex)
 {
     size_t size1 = _width * _height, size2 = tex._width * tex._height;
+    
+    std::cout << "Back color:  " << _backgroundColor.r << ' ' <<_backgroundColor.g <<  ' ' << _backgroundColor.b << ' ' << _backgroundColor.a << std::endl;
     
     for (size_t i = 0, size = (size1 < size2 ? size1 : size2) * 4; i < size; i += 4) {
         if (tex._data[i] != _backgroundColor.r && tex._data[i + 1] != _backgroundColor.g && tex._data[i + 2] != _backgroundColor.b && tex._data[i + 3] != _backgroundColor.a) {

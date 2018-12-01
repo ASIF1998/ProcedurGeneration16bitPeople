@@ -40,8 +40,9 @@
 /* Begin PBXFileReference section */
 		9504507F21A9637900E3484F /* LoadImage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoadImage.cpp; sourceTree = "<group>"; };
 		9504508021A9637900E3484F /* LoadImage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LoadImage.hpp; sourceTree = "<group>"; };
+		9506B71F21B2EE0A006DC1BF /* head_02 - pr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_02 - pr.png"; sourceTree = "<group>"; };
+		9506B72021B2EE21006DC1BF /* head_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_01.png; sourceTree = "<group>"; };
 		95265ABE21B001C0009E4D15 /* feet_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_1.png; sourceTree = "<group>"; };
-		95265ABF21B001C0009E4D15 /* feet_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_2.png; sourceTree = "<group>"; };
 		95265AC021B001C0009E4D15 /* head_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head_1.png; sourceTree = "<group>"; };
 		95265AC121B001C0009E4D15 /* bow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bow_1.png; sourceTree = "<group>"; };
 		95265AC221B019FE009E4D15 /* hair_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair_1.png; sourceTree = "<group>"; };
@@ -91,6 +92,12 @@
 		95C8B94221A82E46000258CD /* VertexxBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexxBuffer.hpp; sourceTree = "<group>"; };
 		95C8B94421A83DA4000258CD /* VertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
 		95C8B94521A83DA4000258CD /* VertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexArray.hpp; sourceTree = "<group>"; };
+		95CF675721B299F200EFCC52 /* feet_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feet_2.png; sourceTree = "<group>"; };
+		95CF675921B2E77600EFCC52 /* hair_01 - pr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hair_01 - pr.png"; sourceTree = "<group>"; };
+		95CF675A21B2E77600EFCC52 /* feet_01 - pr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feet_01 - pr.png"; sourceTree = "<group>"; };
+		95CF675B21B2E77600EFCC52 /* head_02 - pr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "head_02 - pr.png"; sourceTree = "<group>"; };
+		95CF675C21B2E77600EFCC52 /* feet_02 - pr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feet_02 - pr.png"; sourceTree = "<group>"; };
+		95CF675E21B2E77600EFCC52 /* hair_02 - pr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hair_02 - pr.png"; sourceTree = "<group>"; };
 		95D7EBB021AAEC6C00200798 /* helmet_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_01.png; sourceTree = "<group>"; };
 		95D7EBB121AAEC6C00200798 /* helmet_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_02.png; sourceTree = "<group>"; };
 		95D7EBB321AAEC6C00200798 /* shield_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield_01.png; sourceTree = "<group>"; };
@@ -171,10 +178,11 @@
 		957D8F6121A9406D0058630F /* Testing */ = {
 			isa = PBXGroup;
 			children = (
+				95CF675821B2E77600EFCC52 /* Tr */,
 				95265AC121B001C0009E4D15 /* bow_1.png */,
 				95265ABE21B001C0009E4D15 /* feet_1.png */,
-				95265ABF21B001C0009E4D15 /* feet_2.png */,
 				95265AC021B001C0009E4D15 /* head_1.png */,
+				95CF675721B299F200EFCC52 /* feet_2.png */,
 				95265AC221B019FE009E4D15 /* hair_1.png */,
 				95265AC321B01A4B009E4D15 /* hair_2.png */,
 				95D7EBAE21AAEC6C00200798 /* Source */,
@@ -286,6 +294,20 @@
 				953A7AC721A8441600BC3565 /* Texture.h */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		95CF675821B2E77600EFCC52 /* Tr */ = {
+			isa = PBXGroup;
+			children = (
+				95CF675921B2E77600EFCC52 /* hair_01 - pr.png */,
+				95CF675A21B2E77600EFCC52 /* feet_01 - pr.png */,
+				9506B72021B2EE21006DC1BF /* head_01.png */,
+				95CF675B21B2E77600EFCC52 /* head_02 - pr.png */,
+				9506B71F21B2EE0A006DC1BF /* head_02 - pr.png */,
+				95CF675C21B2E77600EFCC52 /* feet_02 - pr.png */,
+				95CF675E21B2E77600EFCC52 /* hair_02 - pr.png */,
+			);
+			path = Tr;
 			sourceTree = "<group>";
 		};
 		95D7EBAE21AAEC6C00200798 /* Source */ = {
