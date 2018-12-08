@@ -21,7 +21,11 @@
 
 #include <random>
 
+#include "System/Directory.hpp"
+
 using namespace std;
+
+const string SourceDirectories = "/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Images/Testing/Tr";
 
 using glm::vec4;
 using glm::mix;
@@ -45,7 +49,6 @@ void randomDraw(unique_ptr<Texture>& texture)
     for (uint32_t i = 0; i < texture->width(); i++) {
         for (uint32_t j = 0; j < texture->height(); j++) {
             if (texture->at(i, j).alpha() > 0.0f) {
-                
                 float r =texture->at(i, j).red();
                 float g =texture->at(i, j).green();
                 float b =texture->at(i, j).blue();
@@ -54,7 +57,7 @@ void randomDraw(unique_ptr<Texture>& texture)
 //                    float _r = r * c.r;
 //                    float _g = g * c.g;
 //                    float _b = b * c.b;
-                    
+
                     float _r = mix(r, c.r,e);
                     float _g = mix(g, c.g, e);
                     float _b = mix(b, c.b, e);
@@ -73,6 +76,83 @@ void randomDraw(unique_ptr<Texture>& texture)
     }
 }
 
+void addTexture(unique_ptr<Texture>& texture, const string_view& path)
+{
+    unique_ptr<Texture> tex = loadImage(path.data());
+    
+    randomDraw(tex);
+    
+    for (uint32_t i = 0; i < tex->width(); i++) {
+        for (uint32_t j = 0; j < tex->height(); j++) {
+            if (tex->at(i, j).alpha() > 0.0f) {
+                texture->at(i, j).red(tex->at(i, j).red());
+                texture->at(i, j).green(tex->at(i, j).green());
+                texture->at(i, j).blue(tex->at(i, j).blue());
+                texture->at(i, j).alpha(1.0);
+                
+            }
+        }
+    }
+}
+
+void clearTexture(unique_ptr<Texture>& texture) {
+    vec4 back = texture->backgroundColor();
+    
+    for (uint32_t i = 0; i < texture->width(); i++) {
+        for (uint32_t j = 0; j < texture->height(); j++) {
+            texture->at(i, j).red(back.r);
+            texture->at(i, j).green(back.b);
+            texture->at(i, j).blue(back.g);
+            texture->at(i, j).alpha(1.0);
+        }
+    }
+
+}
+
+string getFilePath(const Directory& dir)
+{
+    size_t size = dir.fileNames().size();
+    string fileName;
+    
+    if (size <= 3) {
+        fileName = "_";
+    } else {
+        while (fileName.find(".png") == std::string::npos) {
+            fileName = dir.fileNames()[rand() % size];
+        }
+    }
+    
+    return (fileName == "_" ? "_" : dir.directoryPath() + "/" + fileName);
+}
+
+vector<string> getSourceGeneratePath() {
+    vector<string> data;
+    
+    vector<string> genData = {
+        "/Feet",
+        "/Head",
+        "/Torso",
+        "/Bow",
+        "/Hair",
+        "/Helmet",
+        "/Shield",
+        "/Weapon"
+    };
+    
+    string path = "";
+    
+    for (size_t i = 0; i < genData.size(); i++) {
+        if (i < 3 || rand() % 2) {
+            path = getFilePath(Directory(SourceDirectories + genData[i]));
+            if (path != "_") {
+                data.push_back(path);
+            }
+        }
+    }
+    
+    return data;
+}
+
 int main()
 {
     srand((unsigned int)time(nullptr));
@@ -82,7 +162,7 @@ int main()
     bool stay = true;
     unique_ptr<SDL_Event> event (new SDL_Event());
     
-    context->clearColor(0.223529, 0.223529, 0.223529, 0.0f);
+    context->clearColor(0.223529f, 0.223529f, 0.223529f, 0.0f);
     
     GLfloat pos[] = {
         -0.5f, -0.5, 0.0f,
@@ -117,11 +197,15 @@ int main()
     
     prog->use();
     
-    unique_ptr<Texture> tex1 = loadImage("/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Images/Testing/Tr/head_01.png");
-
-    randomDraw(tex1);
+    unique_ptr<Texture> texture (new Texture(2134, 2134, {0.223529f, 0.223529f, 0.223529f, 0.0f}));
     
-    unique_ptr<TextureRender> renderTexture(new TextureRender(*tex1, TextureRender::RGBA16_F, TextureParameter(), tex1->width(), tex1->height()));
+    auto data = getSourceGeneratePath();
+    
+    for (size_t i = 0; i < data.size(); i++) {
+        addTexture(texture, data[i]);
+    }
+    
+    unique_ptr<TextureRender> renderTexture(new TextureRender(*texture, TextureRender::RGBA16_F, TextureParameter(), texture->width(), texture->height()));
     
     renderTexture->bind();
     
@@ -131,6 +215,21 @@ int main()
         while(SDL_PollEvent(&(*event))) {
             if (event->type == SDL_QUIT || (event->key.keysym.scancode == SDL_SCANCODE_ESCAPE)) {
                 stay = false;
+            } else if (event->key.keysym.scancode == SDL_SCANCODE_SPACE) {
+                clearTexture(texture);
+                
+                data = getSourceGeneratePath();
+
+                for (size_t i = 0; i < data.size(); i++) {
+                    addTexture(texture, data[i]);
+                }
+                
+                renderTexture->lock();
+                renderTexture->updateData(*texture);
+                renderTexture->unlock();
+                
+                renderTexture->bind();
+                
             }
         }
         

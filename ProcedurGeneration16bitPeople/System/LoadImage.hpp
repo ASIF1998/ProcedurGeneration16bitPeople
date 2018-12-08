@@ -15,6 +15,12 @@
 
 using std::string_view;
 
+/**
+ * Функция необходимая для загрузки изображения.
+ *
+ * @param path путь до изображения
+ * @return указатель на текстуру
+ */
 unique_ptr<Texture> loadImage(const string_view& path);
 
 #endif /* LoadImage_hpp */

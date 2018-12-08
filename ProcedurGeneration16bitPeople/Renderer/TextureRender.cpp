@@ -55,9 +55,9 @@ TextureRender(storFrom, width, height)
 
 TextureRender::~TextureRender()
 {
-//    if (_handler) {
-//        glDeleteTextures(1, &_handler);
-//    }
+    if (_handler) {
+        glDeleteTextures(1, &_handler);
+    }
 }
 
 void TextureRender::bind(int slot) const noexcept
