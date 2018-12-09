@@ -25,7 +25,7 @@
 
 using namespace std;
 
-const string SourceDirectories = "/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Images/Testing/Tr";
+const string SourceDirectories = "/Users/asifmamedov/Desktop/shaders/project/ProcedurGeneration16bitPeople/Images";
 
 using glm::vec4;
 using glm::mix;
@@ -33,9 +33,9 @@ using glm::smoothstep;
 
 void randomDraw(unique_ptr<Texture>& texture)
 {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_real_distribution<> dis(0.2, 1.0);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_real_distribution<> dis(0.2, 1.0);
     
     vec4 c = {
         dis(gen),
@@ -54,13 +54,13 @@ void randomDraw(unique_ptr<Texture>& texture)
                 float b =texture->at(i, j).blue();
                 
                 if (r != 0.0 && g != 0.0 && b != 0.0) {
-//                    float _r = r * c.r;
-//                    float _g = g * c.g;
-//                    float _b = b * c.b;
+                    float _r = r * c.r;
+                    float _g = g * c.g;
+                    float _b = b * c.b;
 
-                    float _r = mix(r, c.r,e);
-                    float _g = mix(g, c.g, e);
-                    float _b = mix(b, c.b, e);
+//                    float _r = mix(r, c.r,e);
+//                    float _g = mix(g, c.g, e);
+//                    float _b = mix(b, c.b, e);
                     
 //                    float _r = smoothstep(r, c.r, e);
 //                    float _g = smoothstep(g, c.g, e);
@@ -132,11 +132,9 @@ vector<string> getSourceGeneratePath() {
         "/Feet",
         "/Head",
         "/Torso",
-        "/Bow",
-        "/Hair",
-        "/Helmet",
+        "/BowAndWeapon",
+        "/HairAndHelmet",
         "/Shield",
-        "/Weapon"
     };
     
     string path = "";
@@ -215,7 +213,7 @@ int main()
         while(SDL_PollEvent(&(*event))) {
             if (event->type == SDL_QUIT || (event->key.keysym.scancode == SDL_SCANCODE_ESCAPE)) {
                 stay = false;
-            } else if (event->key.keysym.scancode == SDL_SCANCODE_SPACE) {
+            } else if (event->type == SDL_KEYUP && event->key.keysym.scancode == SDL_SCANCODE_SPACE) {
                 clearTexture(texture);
                 
                 data = getSourceGeneratePath();
@@ -229,7 +227,6 @@ int main()
                 renderTexture->unlock();
                 
                 renderTexture->bind();
-                
             }
         }
         
