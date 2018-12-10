@@ -13,7 +13,7 @@
 
 #include "SOIL2/SOIL2.h"
 
-#include "System/LoadImage.hpp"
+#include "System/Image.hpp"
 
 #include "Renderer/TextureRender.h"
 
@@ -199,8 +199,16 @@ int main()
     
     auto data = getSourceGeneratePath();
     
-    for (size_t i = 0; i < data.size(); i++) {
-        addTexture(texture, data[i]);
+    for (size_t i = 0; i < 21; i++) {
+        clearTexture(texture);
+        
+        data = getSourceGeneratePath();
+        
+        for (size_t i = 0; i < data.size(); i++) {
+            addTexture(texture, data[i]);
+        }
+        
+        saveImage(texture, string("img") + to_string(i) + string(".png"));
     }
     
     unique_ptr<TextureRender> renderTexture(new TextureRender(*texture, TextureRender::RGBA16_F, TextureParameter(), texture->width(), texture->height()));
@@ -222,6 +230,7 @@ int main()
                     addTexture(texture, data[i]);
                 }
                 
+        
                 renderTexture->lock();
                 renderTexture->updateData(*texture);
                 renderTexture->unlock();

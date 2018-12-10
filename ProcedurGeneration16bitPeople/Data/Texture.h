@@ -25,6 +25,7 @@ class Texture
 {
     friend class TextureRender;
     friend class HeightMap;
+    friend void saveImage(unique_ptr<Texture>& tex, string_view name);
     
 public:
     
